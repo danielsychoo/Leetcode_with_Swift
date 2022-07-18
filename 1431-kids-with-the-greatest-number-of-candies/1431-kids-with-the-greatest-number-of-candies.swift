@@ -3,11 +3,10 @@ class Solution {
         var result: [Bool] = []
         for item in candies {
             let added = item + extraCandies
-            let filtered = candies.filter { added < $0 }
+            // let filtered = candies.filter { added < $0 }
 
-            print(filtered)
-
-            if filtered.isEmpty { result.append(true) }
+            // if filtered.isEmpty { result.append(true) }
+            if candies.filter { added < $0 }.isEmpty { result.append(true) }
             else { result.append(false) }
         }
 
