@@ -7,7 +7,7 @@ class Solution {
             let current = grid[row][column]
             
             if grid[row][column] > 0 {
-                count += 2 + (current * 4)
+                count += (current * 4) + 2
             }
             
             if row > 0 {
