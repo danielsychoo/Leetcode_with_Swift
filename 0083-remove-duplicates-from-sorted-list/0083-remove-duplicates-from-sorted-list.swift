@@ -17,7 +17,7 @@ class Solution {
         
         while node.next != nil {
             
-            if node.next?.val == node.val {
+            if node.val == node.next?.val {
                 node.next = node.next?.next
             } else {
                 node = node.next!
