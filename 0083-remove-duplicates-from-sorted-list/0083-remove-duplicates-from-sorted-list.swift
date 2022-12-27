@@ -15,7 +15,7 @@ class Solution {
         
         var node = head
         
-        while node != nil && node.next != nil {
+        while node.next != nil {
             
             if node.next?.val == node.val {
                 node.next = node.next?.next
