@@ -1,12 +1,11 @@
 class Solution {
-
+    
     func buildArray(_ nums: [Int]) -> [Int] {
-
+    
         var result = nums
 
         for i in 0...nums.count-1 {
-            let num = nums[nums[i]]
-            if result[i] != num { result[i] = num }
+            if result[i] != nums[nums[i]] { result[i] = nums[nums[i]] }
         }
 
         return result
