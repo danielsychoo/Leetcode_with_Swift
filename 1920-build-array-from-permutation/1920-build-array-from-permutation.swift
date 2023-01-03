@@ -1,11 +1,15 @@
 class Solution {
     
     func buildArray(_ nums: [Int]) -> [Int] {
-    
-        var result = nums
 
+        var dict: [Int: Int] = [:]
         for i in 0...nums.count-1 {
-            if result[i] != nums[nums[i]] { result[i] = nums[nums[i]] }
+            dict[i] = nums[nums[i]]
+        }
+
+        var result: [Int] = []
+        for i in 0...nums.count-1 {
+            result.append(dict[i]!)
         }
 
         return result
