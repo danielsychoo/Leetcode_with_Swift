@@ -15,22 +15,21 @@ class ParkingSystem {
         
         switch carType {
         case 1:
-            return self.calculate(&self.big)
+            self.big = self.calculate(self.big)
+            return self.big >= 0 ? true : false
         case 2:
-            return self.calculate(&self.medium)
+            self.medium = self.calculate(self.medium)
+            return self.medium >= 0 ? true : false
         default:
-            return self.calculate(&self.small)
+            self.small = self.calculate(self.small)
+            return self.small >= 0 ? true : false
         }
     }
     
-    func calculate(_ typeCount: inout Int) -> Bool {
+    func calculate(_ typeCount: Int) -> Int {
         
-        if typeCount > 0 {
-            typeCount -= 1
-            return true
-        } else {
-            return false
-        }
+        if typeCount > -1 { return typeCount-1 }
+        else { return typeCount }
     }
 }
 
